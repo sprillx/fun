@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+
+
+
+
+    <div  id="outershell" style="border: 1px solid black; padding: 25px;">
+        <div id="question0"> 
+            <h1> Question 1 </h1>
+            <h1> What does  4  x  4 equal ? </h1>
+            <input type="text" id="question1"> <button onclick="bg()"> enter </button>
+        </div>
+        <div id="question2" style="display: none">
+            <h2> Question 2  </h2>
+
+                <h1> What does  5 x 2 equal ? </h1>
+
+
+            <input type="text" id="question2VAL"> <button onclick="bg()"> enter </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        function bg(){
+            
+            let question1Value  = document.querySelector('#question1').value
+            const question = document.getElementById('question1');
+            const question0 = document.getElementById('question0');
+            
+
+
+
+            const question2 = document.getElementById('question2');
+            let question2Value  = document.getElementById('question2VAL').value
+            let question22 = document.getElementById('question2VAL')
+
+
+
+
+
+            if(question1Value !== '16'){
+                document.getElementById('question1').value = 'incorrect'
+                question.style.border = 'solid'
+                question.style.borderColor = 'red'
+              
+            }else if(question1Value === '16'){
+                question.style.border = 'solid'
+                question.style.borderColor = 'green'
+                question2.style.display = 'block'
+                question0.style.display = 'none'
+            }
+
+
+            if(question2Value !== '10'){
+                document.getElementById('question2VAL').value = 'incorrect'
+                question22.style.border = 'solid'
+                question22.style.borderColor = 'red'
+            }
+
+            else if(question2Value === '10'){
+                question22.style.border = 'solid'
+                question22.style.borderColor = 'green'
+            }
+
+        }
+    </script>
+    </body>
+</html>

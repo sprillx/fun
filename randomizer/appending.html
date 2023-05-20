@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .outershell{
+                display: inline-flex;
+                background-color: rgba(36, 236, 169, 0.567);
+                border: 1px solid rgba(36, 236, 169, 0.567);
+                padding: 24px;
+                
+            }
+
+            #represent{
+                margin: 10px;
+            }
+
+            button{
+                background-color: rgba(36, 236, 169, 0.567);
+                
+                
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <div class="outershell">
+            <button id="add"> + </button>    
+            <h2 id="represent">  </h2>
+
+            <button id="less"> - </button>
+        </div>
+
+    <script>
+        const add = document.querySelector('#add');
+
+        const less = document.querySelector('#less');
+
+        let num = 0
+
+
+        console.log(num)
+
+        add.addEventListener('click', () => {
+            
+            document.getElementById('represent').innerHTML = num += 1
+
+
+            console.log(num)
+        })
+
+        less.addEventListener('click', () => {
+                document.getElementById('represent').innerHTML = num -= 1
+        })
+     
+    </script>
+    </body>
+</html>
